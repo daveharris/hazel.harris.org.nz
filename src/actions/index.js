@@ -1,3 +1,3 @@
-import APIActions from './APIActions'
+import APIActions from "./APIActions";
 
-export { APIActions }
+export { APIActions };

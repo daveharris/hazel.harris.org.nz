@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
-import { Bottles } from './components'
-import logo from './logo.svg'
-import './App.css'
+import React, { Component } from "react";
+import { Bottles } from "./components";
+import logo from "./logo.svg";
+import "./App.css";
 
 class App extends Component {
   render() {

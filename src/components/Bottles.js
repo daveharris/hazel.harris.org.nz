@@ -1,5 +1,5 @@
-import React from 'react'
-import { APIActions } from '../actions'
+import React from "react";
+import { APIActions } from "../actions";
 
 class Bottles extends React.Component {
   constructor(props) {
@@ -7,33 +7,37 @@ class Bottles extends React.Component {
     this.state = {
       count_per_month: [],
       sum_per_month: []
-    }
+    };
   }
 
   componentDidMount() {
-    APIActions.fetchJSON('/bottles')
-      .then(data => {
-        this.setState({
-          count_per_month: data.count_per_month,
-          sum_per_month: data.sum_per_month
-        })
-      })
+    APIActions.fetchJSON("/bottles").then(data => {
+      this.setState({
+        count_per_month: data.count_per_month,
+        sum_per_month: data.sum_per_month
+      });
+    });
   }
 
   renderBottles = () => {
-    let listItems = []
+    let listItems = [];
     Object.entries(this.state.count_per_month).forEach(([month, count]) =>
       listItems.push(
         <li key={month}>
-          <b>{month}</b>{count}
+          <b>
+            {month}
+          </b>
+          {count}
         </li>
       )
-    )
+    );
 
     return (
-      <ul>{listItems}</ul>
-    )
-  }
+      <ul>
+        {listItems}
+      </ul>
+    );
+  };
 
   render() {
     return (
@@ -45,4 +49,4 @@ class Bottles extends React.Component {
   }
 }
 
-export default Bottles
+export default Bottles;

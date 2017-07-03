@@ -1,3 +1,3 @@
-import Bottles from './Bottles'
+import Bottles from "./Bottles";
 
-export { Bottles }
+export { Bottles };

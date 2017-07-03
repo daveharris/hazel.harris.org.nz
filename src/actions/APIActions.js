@@ -1,25 +1,25 @@
 function fetchJSON(path) {
   return fetch(`api/${path}`, {
-    accept: 'application/json'
+    accept: "application/json"
   })
     .then(checkStatus)
-    .then(parseJSON)
+    .then(parseJSON);
 }
 
 function checkStatus(response) {
   if (response.status >= 200 && response.status < 300) {
-    return response
+    return response;
   }
-  const error = new Error(`HTTP Error ${response.statusText}`)
-  error.status = response.statusText
-  error.response = response
-  console.log(error) // eslint-disable-line no-console
-  throw error
+  const error = new Error(`HTTP Error ${response.statusText}`);
+  error.status = response.statusText;
+  error.response = response;
+  console.log(error); // eslint-disable-line no-console
+  throw error;
 }
 
 function parseJSON(response) {
-  return response.json()
+  return response.json();
 }
 
-const APIActions = { fetchJSON }
-export default APIActions
+const APIActions = { fetchJSON };
+export default APIActions;
