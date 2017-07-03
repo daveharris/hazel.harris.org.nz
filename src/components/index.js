@@ -1,3 +1,3 @@
-import Bottles from "./Bottles";
+import Graph from "./Graph";
 
-export { Bottles };
+export { Graph };
