@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:3001/",
+  "engines": {
+    "node": "6.2.0"
+  },
   "dependencies": {
     "react": "^15.6.1",
     "react-scripts": "1.0.7",
@@ -20,8 +23,6 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "deploy": "cp -a build/* ../public/",
-    "heroku-postbuild": "npm run build && npm run deploy"
+    "eject": "react-scripts eject"
   }
 }
