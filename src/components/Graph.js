@@ -13,13 +13,13 @@ class Graph extends React.Component {
   }
 
   componentDidMount() {
-    APIActions.fetchJSON("/bottles/week").then(data => {
+    APIActions.fetchJSON("/api/bottles/week").then(data => {
       this.setState({
         bottles_per_week: data
       });
     });
 
-    APIActions.fetchJSON("/solids/week").then(data => {
+    APIActions.fetchJSON("/api/solids/week").then(data => {
       this.setState({
         solids_per_week: data
       });
